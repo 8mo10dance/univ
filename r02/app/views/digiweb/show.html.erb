@@ -22,12 +22,14 @@
     <h1 class="updateInfoArea__title">更新履歴</h1>
     <div class="updateInfoArea__info">
       <ul class="updateInfoArea__list">
-        <li class="updateInfoArea__item">
-          <ul class="history">
-            <li class="history__updatedAt">2019-01-01</li>
-            <li class="history__description">aaa</li>
-          </ul>
-        </li>
+        <% @histories.each do |history| %>
+          <li class="updateInfoArea__item">
+            <ul class="history">
+              <li class="history__updatedAt"><%= history.update_date %></li>
+              <li class="history__description"><%= history.description %></li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

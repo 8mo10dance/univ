@@ -1,0 +1,6 @@
+create_table "update_histories", id: :bigint, unsigned: true, force: :cascade, comment: "更新履歴" do |t|
+  t.string "description", default: "", null: false
+  t.string "update_date"
+  t.datetime "updated_at", null: false
+  t.datetime "created_at", null: false
+end
