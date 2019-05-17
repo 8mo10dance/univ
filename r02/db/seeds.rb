@@ -86,3 +86,10 @@ menu_list_params = [
         ],
       },
     ]
+
+menu_list_params.reverse_each do |param|
+  category_code = param[:name]
+  param[:items].each do |item|
+    Digiweb::MenuList.create!(name: item[:name], url: item[:url], category_code: category_code == 'Link' ? 0 : 1)
+  end
+end
