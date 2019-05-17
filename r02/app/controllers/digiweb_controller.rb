@@ -2,6 +2,5 @@
 
 class DigiwebController < ApplicationController
   def show
-    head :ok
   end
 end

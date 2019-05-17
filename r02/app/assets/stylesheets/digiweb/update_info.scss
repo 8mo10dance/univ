@@ -1,0 +1,33 @@
+.updateInfoArea {
+  width: 100%;
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    background-color: #abcdef;
+    font-size: 15px;
+  }
+
+  &__info {
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px #000000;
+    overflow: scroll;
+  }
+
+  &__list {
+    padding-left: 10px;
+    list-style: none;
+    font-size: small;
+  }
+}
+
+.history {
+  display: flex;
+  list-style: none;
+
+  &__updatedAt {
+    width: 100px;
+  }
+}
