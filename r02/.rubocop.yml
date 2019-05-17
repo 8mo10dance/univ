@@ -1,0 +1,79 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: true
+  EnforcedStyle: braces_for_chaining
+
+Style/CollectionMethods:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/NumericPredicate:
+  AutoCorrect: true
+  EnforcedStyle: comparison
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/IndentArray:
+  EnforcedStyle: consistent
+
+Metrics:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 120
+
+Naming/UncommunicativeMethodParamName:
+  MinNameLength: 1
+
+# RSpec/ContextWording:
+#   Enabled: false
+
+# RSpec/MultipleExpectations:
+#   Enabled: false
+
+# RSpec/ExampleLength:
+#   Enabled: false
+
+# RSpec/NestedGroups:
+#   Enabled: false
