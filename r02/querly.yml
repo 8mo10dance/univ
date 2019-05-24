@@ -1,0 +1,9 @@
+rules:
+  - id: gaco.models.enumerize
+    pattern: Enumerize
+    message: extend Enumeize は ApplicationRecord に書いてあるからいらないよ〜〜
+
+check:
+  - path: '**/application_record.rb'
+    rules:
+      - except: gaco.models.enumerize
