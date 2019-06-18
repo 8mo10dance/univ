@@ -64,6 +64,7 @@ end
 
 group :test do
   gem 'factory_girl_rails', '~> 4.8.0'
+  gem 'json_matchers'
   gem 'rspec-rails', '~> 3.6.0'
 end
 
