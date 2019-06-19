@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": ["list_menu_list"],
+  "properties": {
+    "list_menu_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "items"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "url"],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
