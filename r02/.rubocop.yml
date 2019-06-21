@@ -1,7 +1,17 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Include
+
 AllCops:
+  DisplayStyleGuide: true
+  Include:
+    - 'db/*.schema'
   Exclude:
     - 'vendor/**/*'
-    - 'db/schema.rb'
 
 Style/AsciiComments:
   Enabled: false
@@ -41,14 +51,23 @@ Style/FrozenStringLiteralComment:
 Layout/EndOfLine:
   EnforcedStyle: lf
 
+Layout/HeredocArgumentClosingParenthesis:
+  Enabled: true
+
 Layout/IndentationConsistency:
   EnforcedStyle: rails
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Lint/HeredocMethodCallPosition:
+  Enabled: true
 
 Metrics:
   Enabled: false
@@ -66,14 +85,17 @@ Metrics/LineLength:
 Naming/UncommunicativeMethodParamName:
   MinNameLength: 1
 
-# RSpec/ContextWording:
-#   Enabled: false
+RSpec/ContextWording:
+  Enabled: false
 
-# RSpec/MultipleExpectations:
-#   Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
 
-# RSpec/ExampleLength:
-#   Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
 
-# RSpec/NestedGroups:
-#   Enabled: false
+RSpec/NestedGroups:
+  Enabled: false
+
+Performance/OpenStruct:
+  Enabled: true
