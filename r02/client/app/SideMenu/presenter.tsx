@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Item, ListMenuItem } from './types'
+import { Props } from './container'
 
 const SideMenuItem = styled.li`
   height: 50px;
@@ -69,62 +70,30 @@ const SideMenuList = styled.ul`
   background-color: rgba(103, 65, 49, 0.6);
 `
 
-const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
-  if (a1.length != a2.length) {
-    return false
-  }
-  if (a1.length === 0 && a2.length === 0) {
-    return true
-  }
-  const [head1, ...rest1] = a1
-  const [head2, ...rest2] = a2
-  if (head1.name === head2.name && head1.url === head2.url) {
-    return deepEqual(rest1, rest2)
-  }
-  return false
-}
-
-export interface Props {
-  listMenuList: Array<ListMenuItem>
-}
-
-export default ({ listMenuList }: Props) => {
-  const [contentList, setContentList] = React.useState([])
-  const [isClosing, toggleClose] = React.useState(false)
-
-  const handleClick = (menuItem: ListMenuItem) => () => {
-    if (deepEqual(contentList, menuItem.items)) {
-      setContentList([])
-      toggleClose(true)
-
-      setTimeout(() => {
-        setContentList([])
-        toggleClose(false)
-      }, 1000)
-    } else {
-      setContentList(menuItem.items)
-    }
-  }
-  return (
-    <SideMenuBox>
-      <SideMenuList>
-        {listMenuList.map((menuItem, i) => (
-          <SideMenuItem key={i} onClick={handleClick(menuItem)}>
-            {menuItem.name}
-          </SideMenuItem>
-        ))}
-      </SideMenuList>
-      {(contentList.length > 0 || isClosing) && (
-        <SideMenuDetail isClosing={isClosing}>
-          <SideMenuDetailList>
-            {contentList.map((item, i) => (
-              <li key={i}>
-                <a href={item.url}>{item.name}</a>
-              </li>
-            ))}
-          </SideMenuDetailList>
-        </SideMenuDetail>
-      )}
-    </SideMenuBox>
-  )
-}
+export default ({
+  listMenuList,
+  contentList,
+  isClosing,
+  handleClick,
+}: Props) => (
+  <SideMenuBox>
+    <SideMenuList>
+      {listMenuList.map((menuItem, i) => (
+        <SideMenuItem key={i} onClick={handleClick(menuItem)}>
+          {menuItem.name}
+        </SideMenuItem>
+      ))}
+    </SideMenuList>
+    {(contentList.length > 0 || isClosing) && (
+      <SideMenuDetail isClosing={isClosing}>
+        <SideMenuDetailList>
+          {contentList.map((item, i) => (
+            <li key={i}>
+              <a href={item.url}>{item.name}</a>
+            </li>
+          ))}
+        </SideMenuDetailList>
+      </SideMenuDetail>
+    )}
+  </SideMenuBox>
+)
