@@ -89,28 +89,20 @@ export interface Props {
 }
 
 export default ({ listMenuList }: Props) => {
-  const [state, setState] = React.useState({
-    contentList: [],
-    isClosing: false,
-  })
-  const { contentList, isClosing } = state
+  const [contentList, setContentList] = React.useState([])
+  const [isClosing, toggleClose] = React.useState(false)
+
   const handleClick = (menuItem: ListMenuItem) => () => {
     if (deepEqual(contentList, menuItem.items)) {
-      setState({
-        contentList: [],
-        isClosing: true,
-      })
+      setContentList([])
+      toggleClose(true)
+
       setTimeout(() => {
-        setState({
-          contentList: [],
-          isClosing: false,
-        })
+        setContentList([])
+        toggleClose(false)
       }, 1000)
     } else {
-      setState({
-        ...state,
-        contentList: menuItem.items,
-      })
+      setContentList(menuItem.items)
     }
   }
   return (
