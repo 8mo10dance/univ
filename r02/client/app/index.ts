@@ -1,6 +1,6 @@
 import ReactOnRails from 'react-on-rails'
-import TopPage from './TopPage'
+import SideMenu from './SideMenu'
 
 ReactOnRails.register({
-  TopPage,
+  SideMenu,
 })
