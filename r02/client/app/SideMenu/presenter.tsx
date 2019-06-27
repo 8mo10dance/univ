@@ -72,7 +72,6 @@ const SideMenuList = styled.ul`
 
 export default ({
   listMenuList,
-  isFetching,
   contentList,
   isClosing,
   handleClick,

@@ -1,6 +1,14 @@
-import { compose, withState, withHandlers, lifecycle } from 'recompose'
+import {
+  compose,
+  withState,
+  withHandlers,
+  lifecycle,
+  branch,
+  renderComponent,
+} from 'recompose'
 import SideMenu from './presenter'
 import { Item, ListMenuItem } from './types'
+import Loading from './Loading'
 
 const getListMenuList = () =>
   fetch('/api/v1/list_menus').then(response => response.json())
@@ -22,7 +30,6 @@ const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
 
 interface State {
   listMenuList: Array<ListMenuItem>
-  isFetching: boolean
   contentList: Array<Item>
   isClosing: boolean
 }
@@ -69,5 +76,10 @@ export default compose<Props, {}>(
     componentDidMount() {
       this.props.fetchListMenuList()
     },
-  })
+  }),
+  branch(
+    ({ isFetching }) => isFetching,
+    renderComponent(Loading),
+    component => component
+  )
 )(SideMenu)
