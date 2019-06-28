@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'enumerize'
-gem 'react_on_rails', '11.2.2'
 gem 'ridgepole'
 gem 'simplecov', require: false, group: :test
 gem 'sqlite3'
