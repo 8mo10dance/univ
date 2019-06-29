@@ -9,7 +9,6 @@
     "dependencies": {
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
-        "react-on-rails": "11.2.2",
         "recompose": "^0.30.0",
         "styled-components": "^4.0.2",
         "ts-loader": "^6.0.0",
