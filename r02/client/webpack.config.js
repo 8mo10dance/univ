@@ -1,7 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  entry: './app/index.tsx',
+  entry: {
+    'digiweb/bundle': './app/digiweb/index.tsx',
+  },
   output: {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
     filename: '[name].js',
