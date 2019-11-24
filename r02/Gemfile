@@ -34,6 +34,7 @@ gem 'enumerize'
 gem 'ridgepole'
 gem 'simplecov', require: false, group: :test
 gem 'sqlite3'
+gem 'rswag'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
