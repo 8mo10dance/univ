@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import SideMenu from './SideMenu'
+import App from './App'
 
 document.addEventListener('DOMContentLoaded', () => {
-  render(<SideMenu />, document.getElementById('root'))
+  render(<App />, document.getElementById('root'))
 })
