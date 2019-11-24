@@ -1,15 +1,19 @@
 {
-    "compilerOptions": {
-        "declaration": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "lib": ["es6", "dom"],
-        "module": "es6",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "target": "es5",
-        "jsx": "react",
-    },
-    "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
-    "compileOnSave": false
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "noEmit": true /* Do not emit outputs. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "baseUrl": "./app" /* Base directory to resolve non-absolute module names. */
+  },
+  "include": ["app/**/*"],
+  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "compileOnSave": false
 }

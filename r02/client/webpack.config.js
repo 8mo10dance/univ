@@ -8,9 +8,11 @@ module.exports = {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
     filename: '[name].js',
   },
+  mode: 'development',
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    modules: [path.resolve(__dirname, 'app'), 'node_modules'],
   },
   module: {
     rules: [
@@ -18,9 +20,11 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'ts-loader',
+            loader: 'babel-loader',
           },
         ],
+        include: [path.resolve(__dirname, 'app')],
+        exclude: /node_modules/,
       },
     ],
   },
