@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Item, ListMenuItem } from './types'
-import { Props } from './container'
 
 const SideMenuItem = styled.li`
   height: 50px;
@@ -69,6 +68,13 @@ const SideMenuList = styled.ul`
   list-style: none;
   background-color: rgba(103, 65, 49, 0.6);
 `
+
+interface Props {
+  listMenuList: ListMenuItem[]
+  contentList: Item[]
+  isClosing: boolean
+  handleClick: (menuItem: ListMenuItem) => () => void
+}
 
 export default ({
   listMenuList,
