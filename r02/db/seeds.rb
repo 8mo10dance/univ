@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 history_params = [
+  { 'updatedAt': '2019/12/01', 'description': 'メイン画像を変更' },
   { 'updatedAt': '2019/03/02', 'description': 'トップページのレイアウトを変更' },
   { 'updatedAt': '2018/12/30', 'description': 'Alice6をLinkに追加' },
   { 'updatedAt': '2018/12/30', 'description': '作品データベースをLinkに追加' },
