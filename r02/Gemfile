@@ -32,9 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'enumerize'
 gem 'ridgepole'
+gem 'rswag'
 gem 'simplecov', require: false, group: :test
 gem 'sqlite3'
-gem 'rswag'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.6.0'
   gem 'selenium-webdriver'
 end
 
@@ -57,14 +58,13 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'querly'
-  gem 'rspec-rails', '~> 3.6.0'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
   gem 'factory_girl_rails', '~> 4.8.0'
-  gem 'rspec-rails', '~> 3.6.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
