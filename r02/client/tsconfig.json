@@ -11,9 +11,11 @@
     "jsx": "react",
     "noEmit": true /* Do not emit outputs. */,
     "strict": true /* Enable all strict type-checking options. */,
-    "baseUrl": "./app" /* Base directory to resolve non-absolute module names. */
+    "baseUrl": "./",
+    "paths": { "import-svg": ["types/import-svg"] },
+    "typeRoots": ["types", "node_modules/@types"]
   },
-  "include": ["app/**/*"],
+  "include": ["app", "types"],
   "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
   "compileOnSave": false
 }
