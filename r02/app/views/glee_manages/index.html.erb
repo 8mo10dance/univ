@@ -1,0 +1,25 @@
+<% provide :title, 'マネミ議事録' %>
+<%= stylesheet_link_tag 'glee_manages/application', media: 'all' %>
+<%= javascript_include_tag 'webpack/glee_manages/application' %>
+
+<div id='fileListMain' style='display: none;'>
+  <%= @file_list_main.to_json %>
+</div>
+
+<div id='fileListSub' style='display: none;'>
+  <%= @file_list_sub.to_json %>
+</div>
+
+<div id="titleBox">
+  <h1>マネミ議事録</h1>
+</div>
+
+<div id="menu">
+  <center><h3>議事録一覧</h3></center>
+  <ul id="showList" style="list-style: none;"></ul>
+  <a id="listBtn" href="#">これ以前の議事録</a>
+	<hr>
+	<a href="index_old.php">前期議事録</a>
+</div>
+
+<%= @content.html_safe %>
