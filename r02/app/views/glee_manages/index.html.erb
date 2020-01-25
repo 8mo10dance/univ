@@ -10,16 +10,8 @@
   <%= @file_list_sub.to_json %>
 </div>
 
-<div id="titleBox">
-  <h1>マネミ議事録</h1>
+<div id="content-json" style="display: none;">
+  <%= @content %>
 </div>
 
-<div id="menu">
-  <center><h3>議事録一覧</h3></center>
-  <ul id="showList" style="list-style: none;"></ul>
-  <a id="listBtn" href="#">これ以前の議事録</a>
-	<hr>
-	<a href="index_old.php">前期議事録</a>
-</div>
-
-<%= @content.html_safe %>
+<div id="root"></div>
