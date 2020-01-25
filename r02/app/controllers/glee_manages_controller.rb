@@ -5,7 +5,7 @@ class GleeManagesController < ApplicationController
 
   def index
     file_list = Dir::entries(Rails.root.join('public', 'articles')).select do |filename|
-      filename =~ /.html$/
+      filename =~ /.json$/
     end
 
     @file_list_main = file_list.reverse.take(MAX_LIST_SIZE)
