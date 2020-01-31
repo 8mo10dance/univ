@@ -12,7 +12,7 @@ describe Api::V1::UpdateHistoriesController do
         schema(
           type: :object,
           properties: {
-            update_histories: {
+            updateHistories: {
               type: :array,
               items: {
                 type: :object,
@@ -20,15 +20,15 @@ describe Api::V1::UpdateHistoriesController do
                   description: {
                     type: :string,
                   },
-                  update_date: {
+                  updateDate: {
                     type: :string,
                   },
                 },
-                required: %w[description update_date],
+                required: %w[description updateDate],
               },
             },
           },
-          required: %w[update_histories],
+          required: %w[updateHistories],
         )
 
         run_test!
