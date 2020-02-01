@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :list_menus, only: :index
       resources :update_histories, only: :index
+      resources :article_groups, only: %i[index]
     end
   end
 end
