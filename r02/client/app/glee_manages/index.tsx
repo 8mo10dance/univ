@@ -1,15 +1,20 @@
-import axios from 'axios'
-import { ArticleGroup } from 'types/models'
+import * as React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './store'
+import App from './App'
 
-const getArticleGroups = async () => {
-  try {
-    const response = await axios.get('/api/v1/article_groups')
+document.addEventListener('DOMContentLoaded', () => {
+  const mainListElement = document.getElementById('fileListMain')
+  const mainList = JSON.parse(mainListElement.innerHTML)
+  const subListElement = document.getElementById('fileListSub')
+  const subList = JSON.parse(subListElement.innerHTML)
+  const content = JSON.parse(document.getElementById('content-json').innerHTML)
 
-    const articleGroups: ArticleGroup[] = response.data.articleGroups
-    console.log(articleGroups)
-  } catch (e) {
-    console.log(e)
-  }
-}
-
-getArticleGroups()
+  render(
+    <Provider store={store}>
+      <App content={content} mainList={mainList} subList={subList} />,
+    </Provider>,
+    document.getElementById('root')
+  )
+})
