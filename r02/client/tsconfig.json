@@ -14,7 +14,7 @@
     "baseUrl": "./",
     "paths": {
       "import-svg": ["types/import-svg"],
-      "*": ["app/digiweb/*"]
+      "*": ["app/digiweb/*", "app/glee_manages/*"]
     },
     "typeRoots": ["types", "node_modules/@types"]
   },
