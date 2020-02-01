@@ -1,0 +1,1 @@
+export const PUSH_ALL = 'ARTICLE_GROUP/PUSH_ALL'
