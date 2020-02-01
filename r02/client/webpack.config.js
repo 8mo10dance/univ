@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   entry: {
     'digiweb/bundle': './app/digiweb/index.tsx',
-    'glee_manages/bundle': './app/glee_manages/index.js',
+    'glee_manages/bundle': './app/glee_manages/index.tsx',
   },
   output: {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
