@@ -1,8 +1,21 @@
 import * as React from 'react'
-import { ArticleItem } from 'types/models'
+import { format } from 'date-fns'
+import { ArticleGroup } from 'types/models'
 
 interface Props {
-  list: ArticleItem[]
+  list: ArticleGroup[]
+}
+
+const formatFilename = (date: string) => {
+  const d = new Date(date)
+
+  return format(d, 'MMdd')
+}
+
+const formatDate = (date: string) => {
+  const d = new Date(date)
+
+  return format(d, 'yyyy年MM月dd日')
 }
 
 export default ({ list }: Props) => {
@@ -10,8 +23,8 @@ export default ({ list }: Props) => {
     <ul style={{ listStyle: 'none' }}>
       {list.map((item, index) => (
         <li key={index}>
-          <a href={`?filename=${item}`}>
-            {`${item.slice(0, 2)}月${item.slice(2, 4)}日マネミ`}
+          <a href={`?filename=${formatFilename(item.publishedAt)}.json`}>
+            {`${formatDate(item.publishedAt)}マネミ`}
           </a>
         </li>
       ))}

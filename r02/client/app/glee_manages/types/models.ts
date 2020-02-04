@@ -1,6 +1,6 @@
 export interface ArticleGroup {
   articles: Article[]
-  publishedAt: Date
+  publishedAt: string // TODO: Dateにする
 }
 
 export interface Article {

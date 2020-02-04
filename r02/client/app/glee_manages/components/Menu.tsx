@@ -3,16 +3,20 @@ import { ArticleGroup } from 'types/models'
 import MenuList from 'components/MenuList'
 
 interface Props {
-  mainList: ArticleGroup[]
-  subList: ArticleGroup[]
+  articleGroups: ArticleGroup[]
 }
 
-export default ({ mainList, subList }: Props) => {
-  const [isLatest, toggle] = React.useState(false)
+const MENU_LIST_SIZE = 5
+
+export default ({ articleGroups }: Props) => {
+  const [isLatest, toggle] = React.useState(true)
 
   const handleClick = () => {
     toggle(!isLatest)
   }
+
+  const mainList = articleGroups.slice(0, MENU_LIST_SIZE)
+  const subList = articleGroups.slice(MENU_LIST_SIZE)
 
   return (
     <div id="menu">
