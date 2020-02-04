@@ -1,15 +1,10 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { ArticleGroup } from 'types/models'
 
 interface Props {
   list: ArticleGroup[]
-}
-
-const formatFilename = (date: string) => {
-  const d = new Date(date)
-
-  return format(d, 'MMdd')
 }
 
 const formatDate = (date: string) => {
@@ -23,9 +18,9 @@ export default ({ list }: Props) => {
     <ul style={{ listStyle: 'none' }}>
       {list.map((item, index) => (
         <li key={index}>
-          <a href={`?filename=${formatFilename(item.publishedAt)}.json`}>
+          <Link to={`/${item.id}`}>
             {`${formatDate(item.publishedAt)}マネミ`}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

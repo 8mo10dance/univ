@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import { RootState } from 'modules'
 import { getArticleGroups } from 'modules/articleGroups/actions'
 
@@ -17,9 +18,15 @@ export const useArticleGroups = () => {
 }
 
 export const useCurrentArticleGroup = () => {
+  const params = useParams()
   const articleGroups = useSelector(
     (rootState: RootState) => rootState.articleGroups.all
   )
+  const currentArticleGroup =
+    articleGroups.find(articleGroup => String(articleGroup.id) === params.id) ||
+    articleGroups[0]
 
-  return { currentArticleGroup: articleGroups[0] }
+  return {
+    currentArticleGroup,
+  }
 }
