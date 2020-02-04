@@ -5,11 +5,9 @@ import store from './store'
 import App from './App'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const content = JSON.parse(document.getElementById('content-json').innerHTML)
-
   render(
     <Provider store={store}>
-      <App content={content} />,
+      <App />,
     </Provider>,
     document.getElementById('root')
   )

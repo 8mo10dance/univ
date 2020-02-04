@@ -3,13 +3,13 @@ import { Article } from 'types/models'
 
 type Props = Article
 
-export default ({ title, list }: Props) => {
+export default ({ title, articleItems }: Props) => {
   return (
     <div className="articles">
       <h2>{title}</h2>
       <ul>
-        {list.map((item, index) => (
-          <li key={index}>{item}</li>
+        {articleItems.map((item, index) => (
+          <li key={index}>{item.text}</li>
         ))}
       </ul>
     </div>

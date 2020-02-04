@@ -15,3 +15,11 @@ export const useArticleGroups = () => {
 
   return { articleGroups }
 }
+
+export const useCurrentArticleGroup = () => {
+  const articleGroups = useSelector(
+    (rootState: RootState) => rootState.articleGroups.all
+  )
+
+  return { currentArticleGroup: articleGroups[0] }
+}
