@@ -1,7 +1,17 @@
 import { ArticleGroup } from 'types/models'
 import * as ActionType from './actionType'
 
-export const pushAll = (articleGroups: ArticleGroup[]) => ({
-  type: ActionType.PUSH_ALL as typeof ActionType.PUSH_ALL,
-  payload: { articleGroups },
-})
+export const getArticleGroups = {
+  start: () => ({
+    type: ActionType.GET_ARTICLE_GROUPS_START as typeof ActionType.GET_ARTICLE_GROUPS_START,
+  }),
+  succeed: (articleGroups: ArticleGroup[]) => ({
+    type: ActionType.GET_ARTICLE_GROUPS_SUCCEED as typeof ActionType.GET_ARTICLE_GROUPS_SUCCEED,
+    payload: {
+      articleGroups,
+    },
+  }),
+  fail: () => ({
+    type: ActionType.GET_ARTICLE_GROUPS_FAIL as typeof ActionType.GET_ARTICLE_GROUPS_FAIL,
+  }),
+}
