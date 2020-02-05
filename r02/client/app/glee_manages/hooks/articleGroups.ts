@@ -18,7 +18,7 @@ export const useArticleGroups = () => {
 }
 
 export const useCurrentArticleGroup = () => {
-  const params = useParams()
+  const params = useParams<{ id: string }>()
   const articleGroups = useSelector(
     (rootState: RootState) => rootState.articleGroups.all
   )
