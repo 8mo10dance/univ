@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    modules: [path.resolve(__dirname, 'app'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'app/digiweb'), 'node_modules'],
   },
   module: {
     rules: [
