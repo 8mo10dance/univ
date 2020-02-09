@@ -3,31 +3,3 @@ background-color:#656565;
 margin:0;
 padding:0;
 }
-#titleBox{
-line-height:60px;
-height:60px;
-width:100%;
-background-color:#3498db;
-}
-#titleBox > h1{
-margin:0px;
-color:white;
-text-align:center;
-}
-#menu{
-float:left;
-width:230px;
-height:700px;
-background-color:#878787;
-}
-body > h2{
-background-color:#defabc;
-}
-.articles{
-background-color:#fffeee;
-font-size:small;
-margin:5px 20px 5px 250px;
-box-shadow:0px 2px 5px black;
-border-radius:8px;
-padding:0px 5px 0px 5px;
-}
