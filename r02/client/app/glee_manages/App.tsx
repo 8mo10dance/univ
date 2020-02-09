@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { ThemeProvider, CssBaseline } from '@material-ui/core'
+import { ThemeProvider, CssBaseline, Box } from '@material-ui/core'
 import { useArticleGroups } from 'hooks/articleGroups'
 import TitleBox from 'components/TitleBox'
 import Menu from 'components/Menu'
@@ -14,16 +14,20 @@ export default () => {
     <Router>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <TitleBox />
-        <Menu articleGroups={articleGroups} />
-        <Switch>
-          <Route exact path="/">
-            <ArticleGroupBox />
-          </Route>
-          <Route path="/:id">
-            <ArticleGroupBox />
-          </Route>
-        </Switch>
+        <Box display="flex">
+          <TitleBox />
+          <Menu articleGroups={articleGroups} />
+          <Box flex={1}>
+            <Switch>
+              <Route exact path="/">
+                <ArticleGroupBox />
+              </Route>
+              <Route path="/:id">
+                <ArticleGroupBox />
+              </Route>
+            </Switch>
+          </Box>
+        </Box>
       </ThemeProvider>
     </Router>
   )
