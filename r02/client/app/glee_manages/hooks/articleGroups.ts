@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { RootState } from 'modules'
-import { getArticleGroups } from 'modules/articleGroups/actions'
+import { RootState } from '../modules'
+import { getArticleGroups } from '../modules/articleGroups/actions'
 
 export const useArticleGroups = () => {
   const articleGroups = useSelector(
