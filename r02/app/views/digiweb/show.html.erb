@@ -2,34 +2,4 @@
 <%= stylesheet_link_tag 'digiweb/application', media: 'all' %>
 <%= javascript_include_tag 'webpack/digiweb/application' %>
 
-<div class="topPage">
-  <div class="header">
-    <h1 class="header__title">DigiWeb</h1>
-    <div class="header__nav">
-      <ul class="nav">
-        <li class="nav__item">
-          <a class="nav__link" href="http://wcdxm.webcrow.jp">Daily</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">有限書庫</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div id="root"></div>
-  <div class="updateInfoArea">
-    <h1 class="updateInfoArea__title">更新履歴</h1>
-    <div class="updateInfoArea__info">
-      <ul class="updateInfoArea__list">
-        <% @histories.each do |history| %>
-          <li class="updateInfoArea__item">
-            <ul class="history">
-              <li class="history__updatedAt"><%= history.update_date %></li>
-              <li class="history__description"><%= history.description %></li>
-            </ul>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
+<div id="root"></div>

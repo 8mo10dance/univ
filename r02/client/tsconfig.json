@@ -12,7 +12,10 @@
     "noEmit": true /* Do not emit outputs. */,
     "strict": true /* Enable all strict type-checking options. */,
     "baseUrl": "./",
-    "paths": { "import-svg": ["types/import-svg"] },
+    "paths": {
+      "import-svg": ["types/import-svg"],
+      "*": ["app/digiweb/*"]
+    },
     "typeRoots": ["types", "node_modules/@types"]
   },
   "include": ["app", "types"],
