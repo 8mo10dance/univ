@@ -1,13 +1,10 @@
 const path = require('path')
 
 module.exports = {
-  entry: {
-    'digiweb/bundle': './app/index.tsx',
-    'glee_manages/bundle': './app/glee_manages/index.tsx',
-  },
+  entry: './app/index.tsx',
   output: {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
-    filename: '[name].js',
+    filename: 'bundle.js',
   },
   mode: 'development',
   devtool: 'source-map',
