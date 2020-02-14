@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    'digiweb/bundle': './app/digiweb/index.tsx',
+    'digiweb/bundle': './app/index.tsx',
     'glee_manages/bundle': './app/glee_manages/index.tsx',
   },
   output: {
@@ -14,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     modules: [
-      path.resolve(__dirname, 'app/digiweb'),
+      path.resolve(__dirname, 'app'),
       path.resolve(__dirname, 'app/glee_manages'),
       'node_modules',
     ],
