@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={store}>
       <App />,
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('root2')
   )
 })
