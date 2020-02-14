@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { List, ListSubheader, ListItem, ListItemText } from '@material-ui/core'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { format } from 'date-fns'
-import { ArticleGroup } from '../types/models'
+import { ArticleGroup } from 'types/models'
 
 interface Props {
   list: ArticleGroup[]

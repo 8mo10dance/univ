@@ -1,4 +1,4 @@
-import { ArticleGroup } from '../../types/models'
+import { ArticleGroup } from 'types/models'
 import * as ActionType from './actionType'
 
 export const getArticleGroups = {

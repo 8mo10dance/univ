@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Divider, Button } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import { ArticleGroup } from '../types/models'
+import { ArticleGroup } from 'types/models'
 import MenuList from '../components/MenuList'
 
 interface Props {

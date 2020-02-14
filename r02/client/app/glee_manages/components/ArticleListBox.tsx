@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import { Article } from '../types/models'
+import { Article } from 'types/models'
 import ArticleBox from '../components/ArticleBox'
 
 const useStyles = makeStyles((theme: Theme) =>

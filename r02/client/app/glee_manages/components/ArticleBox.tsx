@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Card, CardContent, Typography } from '@material-ui/core'
-import { Article } from '../types/models'
+import { Article } from 'types/models'
 
 type Props = Article
 
