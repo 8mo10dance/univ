@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
   entry: {
     'digiweb/bundle': './app/digiweb/index.tsx',
+    'glee_manages/bundle': './app/glee_manages/index.tsx',
   },
   output: {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
@@ -12,12 +13,16 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    modules: [path.resolve(__dirname, 'app/digiweb'), 'node_modules'],
+    modules: [
+      path.resolve(__dirname, 'app/digiweb'),
+      path.resolve(__dirname, 'app/glee_manages'),
+      'node_modules',
+    ],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(j|t)sx?$/,
         use: [
           {
             loader: 'babel-loader',

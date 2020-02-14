@@ -1,0 +1,11 @@
+create_table :articles, id: :bigint, unsigned: true, force: :cascade, comment: "議事録" do |t|
+  t.integer :article_group_id, null: false
+
+  t.string :title, null: false
+  t.date :published_at
+
+  t.datetime :updated_at, null: false
+  t.datetime :created_at, null: false
+
+  t.index :article_group_id
+end

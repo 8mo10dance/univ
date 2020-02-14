@@ -3,3 +3,6 @@
 
 require 'menu_lists.schema'
 require 'update_histories.schema'
+require 'article_groups.schema'
+require 'articles.schema'
+require 'article_items.schema'
