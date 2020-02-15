@@ -5,7 +5,7 @@ import { useArticleGroups } from 'hooks/articleGroups'
 import TitleBox from 'components/TitleBox'
 import Menu from 'components/Menu'
 import ArticleGroupBox from 'components/ArticleGroupBox'
-import theme from './theme'
+import theme from 'theme'
 
 export default () => {
   const { articleGroups } = useArticleGroups()
