@@ -3,7 +3,6 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 import App from './App'
-import store2 from './glee_manages/store'
 import App2 from './glee_manages/App'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     )
   } else {
     render(
-      <Provider store={store2}>
+      <Provider store={store}>
         <App2 />,
       </Provider>,
       document.getElementById('root2')
