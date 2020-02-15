@@ -19,10 +19,10 @@ export default () => {
           <Menu articleGroups={articleGroups} />
           <Box flex={1}>
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/glee_manages">
                 <ArticleGroupBox />
               </Route>
-              <Route path="/:id">
+              <Route path="/glee_manages/:id">
                 <ArticleGroupBox />
               </Route>
             </Switch>

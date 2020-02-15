@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe DigiwebController, type: :controller do
+RSpec.describe HomeController, type: :controller do
   describe '#show' do
     subject { get :show }
 

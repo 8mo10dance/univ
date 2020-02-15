@@ -10,11 +10,7 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    modules: [
-      path.resolve(__dirname, 'app'),
-      path.resolve(__dirname, 'app/glee_manages'),
-      'node_modules',
-    ],
+    modules: [path.resolve(__dirname, 'app'), 'node_modules'],
   },
   module: {
     rules: [

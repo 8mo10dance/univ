@@ -14,7 +14,7 @@
     "baseUrl": "./",
     "paths": {
       "import-svg": ["types/import-svg"],
-      "*": ["app/*", "app/glee_manages/*"]
+      "*": ["app/*"]
     },
     "typeRoots": ["types", "node_modules/@types"]
   },
