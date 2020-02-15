@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useCurrentArticleGroup } from '../hooks/articleGroups'
+import { useCurrentArticleGroup } from 'hooks/articleGroups'
 import ArticleListBox from '../components/ArticleListBox'
 
 export default () => {
