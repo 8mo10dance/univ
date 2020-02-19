@@ -42,7 +42,7 @@ export default () => {
   const fetchListMenuList = async () => {
     try {
       const response = await getListMenuItems()
-      setListMenuList(response.data['list_menu_list'])
+      setListMenuList(response.data.listMenuList)
       toggleFetching(false)
     } catch (error) {
       console.log(error)
