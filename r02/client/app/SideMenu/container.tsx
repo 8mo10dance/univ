@@ -1,10 +1,8 @@
 import * as React from 'react'
+import { getListMenuItems } from 'services/listMenuItems'
 import SideMenu from './presenter'
 import { Item, ListMenuItem } from './types'
 import Loading from './Loading'
-
-const getListMenuList = () =>
-  fetch('/api/v1/list_menus').then(response => response.json())
 
 const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
   if (a1.length != a2.length) {
@@ -41,15 +39,14 @@ export default () => {
     }
   }
 
-  const fetchListMenuList = () => {
-    getListMenuList()
-      .then(data => {
-        setListMenuList(data['list_menu_list'])
-        toggleFetching(false)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+  const fetchListMenuList = async () => {
+    try {
+      const response = await getListMenuItems()
+      setListMenuList(response.data['list_menu_list'])
+      toggleFetching(false)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   React.useEffect(() => {
