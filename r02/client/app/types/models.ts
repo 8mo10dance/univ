@@ -19,3 +19,13 @@ export interface ArticleItem {
   id: number
   text: string
 }
+
+export interface Item {
+  name: string
+  url: string
+}
+
+export interface ListMenuItem {
+  name: string
+  items: Item[]
+}

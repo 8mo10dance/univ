@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { getListMenuItems } from 'services/listMenuItems'
 import SideMenu from './presenter'
-import { Item, ListMenuItem } from './types'
+import { Item, ListMenuItem } from 'types/models'
 import Loading from './Loading'
 
 const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
