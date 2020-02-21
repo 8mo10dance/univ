@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { getListMenuItems } from 'services/listMenuItems'
 import SideMenu from './presenter'
 import { Item, ListMenuItem } from 'types/models'
+import { useListMenuItems } from 'hooks/listMenuItems'
 import Loading from './Loading'
 
 const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
@@ -20,8 +20,6 @@ const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
 }
 
 export default () => {
-  const [listMenuList, setListMenuList] = React.useState<ListMenuItem[]>([])
-  const [isFetching, toggleFetching] = React.useState(true)
   const [contentList, setContentList] = React.useState<Item[]>([])
   const [isClosing, toggleClose] = React.useState(false)
 
@@ -39,25 +37,13 @@ export default () => {
     }
   }
 
-  const fetchListMenuList = async () => {
-    try {
-      const response = await getListMenuItems()
-      setListMenuList(response.data.listMenuList)
-      toggleFetching(false)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  React.useEffect(() => {
-    fetchListMenuList()
-  }, [])
+  const { listMenuItems, isFetching } = useListMenuItems()
 
   if (isFetching) return <Loading />
 
   return (
     <SideMenu
-      listMenuList={listMenuList}
+      listMenuList={listMenuItems}
       contentList={contentList}
       isClosing={isClosing}
       handleClick={handleClick}
