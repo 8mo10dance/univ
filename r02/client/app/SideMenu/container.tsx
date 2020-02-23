@@ -1,10 +1,8 @@
 import * as React from 'react'
 import SideMenu from './presenter'
-import { Item, ListMenuItem } from './types'
+import { Item, ListMenuItem } from 'types/models'
+import { useListMenuItems } from 'hooks/listMenuItems'
 import Loading from './Loading'
-
-const getListMenuList = () =>
-  fetch('/api/v1/list_menus').then(response => response.json())
 
 const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
   if (a1.length != a2.length) {
@@ -22,8 +20,6 @@ const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
 }
 
 export default () => {
-  const [listMenuList, setListMenuList] = React.useState<ListMenuItem[]>([])
-  const [isFetching, toggleFetching] = React.useState(true)
   const [contentList, setContentList] = React.useState<Item[]>([])
   const [isClosing, toggleClose] = React.useState(false)
 
@@ -41,26 +37,13 @@ export default () => {
     }
   }
 
-  const fetchListMenuList = () => {
-    getListMenuList()
-      .then(data => {
-        setListMenuList(data['list_menu_list'])
-        toggleFetching(false)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-
-  React.useEffect(() => {
-    fetchListMenuList()
-  }, [])
+  const { listMenuItems, isFetching } = useListMenuItems()
 
   if (isFetching) return <Loading />
 
   return (
     <SideMenu
-      listMenuList={listMenuList}
+      listMenuList={listMenuItems}
       contentList={contentList}
       isClosing={isClosing}
       handleClick={handleClick}

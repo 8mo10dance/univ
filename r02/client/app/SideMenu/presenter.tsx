@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Item, ListMenuItem } from './types'
+import { Item, ListMenuItem } from 'types/models'
 
 const SideMenuItem = styled.li`
   height: 50px;
