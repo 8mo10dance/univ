@@ -29,3 +29,5 @@ export interface ListMenuItem {
   name: string
   items: Item[]
 }
+
+export type Link = Item
