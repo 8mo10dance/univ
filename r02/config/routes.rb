@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :list_menus, only: :index
       resources :update_histories, only: :index
       resources :article_groups, only: %i[index]
+      resources :links, only: %i[index]
     end
   end
 end
