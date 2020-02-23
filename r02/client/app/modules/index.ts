@@ -8,15 +8,18 @@ import articleGroupsReducer, {
 import listMenuItemReducer, {
   State as ListMenuItemState,
 } from './listMenuItem/reducer'
+import linkReducer, { State as LinkState } from './link/reducer'
 
 export interface RootState {
   updateHistories: UpdateHistoryState
   articleGroups: ArticleGroupsState
   listMenuItems: ListMenuItemState
+  links: LinkState
 }
 
 export default combineReducers({
   updateHistories: updateHistoryReducer,
   articleGroups: articleGroupsReducer,
   listMenuItems: listMenuItemReducer,
+  links: linkReducer,
 })
