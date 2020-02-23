@@ -60,12 +60,9 @@ Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
 
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
 
-Layout/IndentFirstHashElement:
-  EnforcedStyle: consistent
-
-Layout/IndentFirstArrayElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Layout/MultilineHashKeyLineBreaks:
@@ -83,11 +80,7 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Enabled: true
 
-Metrics/LineLength:
-  Enabled: true
-  Max: 120
-
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   MinNameLength: 1
 
 RSpec/ContextWording:

@@ -35,6 +35,7 @@ gem 'blueprinter'
 gem 'enumerize'
 gem 'ridgepole'
 gem 'rswag'
+gem 'seed-fu'
 gem 'simplecov', require: false, group: :test
 gem 'sqlite3'
 
