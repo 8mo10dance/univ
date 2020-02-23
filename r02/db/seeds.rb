@@ -50,13 +50,6 @@ end
 
 menu_list_params = [
       {
-        name: 'Application',
-        items: [
-          { name: 'Anicode for WEB', url: '#' },
-          { name: 'MangaCode', url: 'http://wcdxm.webcrow.jp/MangaCode.php' },
-        ],
-      },
-      {
         name: 'Link',
         items: [
           {

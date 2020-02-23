@@ -16,6 +16,19 @@ export default () => {
               有限書庫
             </a>
           </li>
+          <li className="nav__item">
+            <a href="#" className="nav__link">
+              Anicode for WEB
+            </a>
+          </li>
+          <li className="nav__item">
+            <a
+              href="http://wcdxm.webcrow.jp/MangaCode.php"
+              className="nav__link"
+            >
+              MangaCode
+            </a>
+          </li>
         </ul>
       </div>
     </div>
