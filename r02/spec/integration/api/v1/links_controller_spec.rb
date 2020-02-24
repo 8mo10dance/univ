@@ -2,33 +2,33 @@
 
 require 'swagger_helper'
 
-describe Api::V1::UpdateHistoriesController do
-  path '/api/v1/update_histories' do
-    get 'update_histories' do
-      tags '更新履歴'
+describe Api::V1::LinksController do
+  path '/api/v1/links' do
+    get 'links' do
+      tags 'リンク集'
       produces 'application/json'
 
       response '200', 'success' do
         schema(
           type: :object,
           properties: {
-            updateHistories: {
+            links: {
               type: :array,
               items: {
                 type: :object,
                 properties: {
-                  description: {
+                  name: {
                     type: :string,
                   },
-                  updateDate: {
+                  url: {
                     type: :string,
                   },
                 },
-                required: %w[description updateDate],
+                required: %w[name url],
               },
             },
           },
-          required: %w[updateHistories],
+          required: %w[links],
         )
 
         run_test!

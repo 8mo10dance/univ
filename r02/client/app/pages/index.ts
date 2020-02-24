@@ -1,5 +1,4 @@
-import App from '../App'
-import App2 from './GleeManages'
+import Digiweb from './Digiweb'
+import GleeManages from './GleeManages'
 
-export const Digiweb = App
-export const GleeManages = App2
+export { Digiweb, GleeManages }

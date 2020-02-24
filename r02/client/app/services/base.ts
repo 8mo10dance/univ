@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as camelcaseKeys from 'camelcase-keys'
 
-const instance = axios.create({
+export const apiRequest = axios.create({
   transformResponse: [
     (data, headers) => {
       if (
@@ -15,5 +15,3 @@ const instance = axios.create({
     },
   ],
 })
-
-export const getListMenuItems = () => instance.get('/api/v1/list_menus')

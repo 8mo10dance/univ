@@ -1,8 +1,3 @@
-export interface UpdateHistory {
-  description: string
-  updateDate: string
-}
-
 export interface ArticleGroup {
   id: number
   articles: Article[]
@@ -20,12 +15,8 @@ export interface ArticleItem {
   text: string
 }
 
-export interface Item {
+export interface Link {
+  id: number
   name: string
   url: string
-}
-
-export interface ListMenuItem {
-  name: string
-  items: Item[]
 }

@@ -2,9 +2,9 @@
 
 module Api
   module V1
-    class UpdateHistoryBlueprint < Blueprinter::Base
+    class LinkBlueprint < Blueprinter::Base
       identifier :id
-      fields :description, :update_date
+      fields :name, :url
     end
   end
 end

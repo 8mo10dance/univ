@@ -1,14 +1,10 @@
-import { UpdateHistory } from 'types/models'
+import { Link } from 'types/models'
 import * as ActionType from './actionType'
 import * as actions from './actions'
 
 export interface State {
   isFetching?: boolean
-  all: UpdateHistory[]
-}
-
-const initialState: State = {
-  all: [],
+  all: Link[]
 }
 
 type Action =
@@ -16,7 +12,7 @@ type Action =
   | ReturnType<typeof actions.getAll.succeed>
   | ReturnType<typeof actions.getAll.fail>
 
-export default (state: State = initialState, action: Action): State => {
+export default (state: State = { all: [] }, action: Action): State => {
   switch (action.type) {
     case ActionType.GET_ALL_START:
       return {
@@ -27,7 +23,7 @@ export default (state: State = initialState, action: Action): State => {
       return {
         ...state,
         isFetching: false,
-        all: action.payload.updateHistories,
+        all: action.payload.links,
       }
     case ActionType.GET_ALL_FAIL:
       return {
