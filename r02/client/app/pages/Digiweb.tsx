@@ -1,10 +1,10 @@
-import React from 'react'
+import * as React from 'react'
+import { NanohaSan } from 'images'
 import Header from '../Header'
 import SideMenu from '../SideMenu'
 import UpdateInfoArea from '../UpdateInfoArea'
-import NanohaSan from './nanoha_san.svg'
 
-export default () => {
+const Component: React.FC<{}> = () => {
   return (
     <div className="topPage">
       <Header />
@@ -26,3 +26,5 @@ export default () => {
     </div>
   )
 }
+
+export default Component
