@@ -20,16 +20,6 @@ export interface ArticleItem {
   text: string
 }
 
-export interface Item {
-  name: string
-  url: string
-}
-
-export interface ListMenuItem {
-  name: string
-  items: Item[]
-}
-
 export interface Link {
   id: number
   name: string

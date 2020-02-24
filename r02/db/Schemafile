@@ -1,7 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require 'menu_lists.schema'
 require 'update_histories.schema'
 require 'article_groups.schema'
 require 'articles.schema'
