@@ -1,8 +1,3 @@
-export interface UpdateHistory {
-  description: string
-  updateDate: string
-}
-
 export interface ArticleGroup {
   id: number
   articles: Article[]
