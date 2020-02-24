@@ -2,6 +2,7 @@ import * as React from 'react'
 import SideMenu from './presenter'
 import { Item, ListMenuItem } from 'types/models'
 import { useListMenuItems } from 'hooks/listMenuItems'
+import { useLinks } from 'hooks/links'
 import Loading from './Loading'
 
 const deepEqual = (a1: Array<Item>, a2: Array<Item>): boolean => {
@@ -38,6 +39,7 @@ export default () => {
   }
 
   const { listMenuItems, isFetching } = useListMenuItems()
+  const { links } = useLinks()
 
   if (isFetching) return <Loading />
 
