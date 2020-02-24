@@ -1,29 +1,22 @@
 import * as React from 'react'
-import { NanohaSan } from 'images'
-import Header from '../Header'
-import SideMenu from '../SideMenu'
-import UpdateInfoArea from '../UpdateInfoArea'
+import { Box, Paper } from '@material-ui/core'
+import DigiwebHeader from 'components/DigiwebHeader'
+import DigiwebSideMenu from 'components/DigiwebSideMenu'
+import NanohaSan from 'components/NanohaSan'
 
 const Component: React.FC<{}> = () => {
   return (
-    <div className="topPage">
-      <Header />
-      <div style={{ position: 'relative' }}>
-        <NanohaSan width="100%" height="auto" />
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            zIndex: 999,
-            width: 1000,
-          }}
-        >
-          <SideMenu />
-        </div>
-      </div>
-      <UpdateInfoArea />
-    </div>
+    <Box width={1} height={1}>
+      <Paper>
+        <DigiwebHeader />
+        <Box display="flex">
+          <DigiwebSideMenu />
+          <Box flex={1}>
+            <NanohaSan />
+          </Box>
+        </Box>
+      </Paper>
+    </Box>
   )
 }
 

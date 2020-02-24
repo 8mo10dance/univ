@@ -30,4 +30,8 @@ export interface ListMenuItem {
   items: Item[]
 }
 
-export type Link = Item
+export interface Link {
+  id: number
+  name: string
+  url: string
+}
