@@ -59,12 +59,6 @@ Layout/EndOfLine:
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
 
-Layout/IndentationConsistency:
-  EnforcedStyle: indented_internal_methods
-
-Layout/FirstHashElementIndentation:
-  EnforcedStyle: consistent
-
 Layout/MultilineHashKeyLineBreaks:
   Enabled: true
 
@@ -79,9 +73,6 @@ Metrics/CyclomaticComplexity:
 
 Metrics/PerceivedComplexity:
   Enabled: true
-
-Naming/MethodParameterName:
-  MinNameLength: 1
 
 RSpec/ContextWording:
   Enabled: false
