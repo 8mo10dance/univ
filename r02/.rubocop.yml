@@ -53,6 +53,15 @@ Style/NumericPredicate:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always
 
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
 Layout/LineLength:
   Enabled: false
 
