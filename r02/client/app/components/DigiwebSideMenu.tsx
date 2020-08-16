@@ -30,16 +30,20 @@ const Component: React.FC<{}> = () => {
       <div className={classes.toolbar} />
       <Divider />
       <List component="nav">
-        <ListItem component="a" href="http://wcdxm.webcrow.jp">
+        <ListItem button component="a" href="http://wcdxm.webcrow.jp">
           <ListItemText primary="Daily" />
         </ListItem>
-        <ListItem component="a" href="#">
+        <ListItem button>
           <ListItemText primary="有限書庫" />
         </ListItem>
-        <ListItem component="a" href="#">
+        <ListItem button>
           <ListItemText primary="Anicode for WEB" />
         </ListItem>
-        <ListItem component="a" href="http://wcdxm.webcrow.jp/MangaCode.php">
+        <ListItem
+          button
+          component="a"
+          href="http://wcdxm.webcrow.jp/MangaCode.php"
+        >
           <ListItemText primary="MangaCode" />
         </ListItem>
       </List>
