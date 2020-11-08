@@ -100,3 +100,6 @@ RSpec/NestedGroups:
 
 Performance/OpenStruct:
   Enabled: true
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
