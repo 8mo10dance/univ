@@ -13,6 +13,7 @@ AllCops:
     - 'db/*.schema'
   Exclude:
     - 'vendor/**/*'
+    - 'bin/*'
 
 RSpec/EmptyExampleGroup:
   Exclude:
