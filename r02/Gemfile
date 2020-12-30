@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'action_args'
 gem 'blueprinter'
 gem 'enumerize'
+gem 'mini_racer' # これがないと bin/rails できない
 gem 'mysql2'
 gem 'ridgepole'
 gem 'rswag'
