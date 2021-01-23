@@ -6,7 +6,7 @@ import { NanohaSan } from 'images'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     toolbar: theme.mixins.toolbar,
-  })
+  }),
 )
 
 const Component: React.FC<{}> = () => {

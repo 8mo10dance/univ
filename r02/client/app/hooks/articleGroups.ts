@@ -6,7 +6,7 @@ import { getArticleGroups } from 'modules/articleGroups/actions'
 
 export const useArticleGroups = () => {
   const articleGroups = useSelector(
-    (rootState: RootState) => rootState.articleGroups.all
+    (rootState: RootState) => rootState.articleGroups.all,
   )
   const dispatch = useDispatch()
 
@@ -20,11 +20,12 @@ export const useArticleGroups = () => {
 export const useCurrentArticleGroup = () => {
   const params = useParams<{ id: string }>()
   const articleGroups = useSelector(
-    (rootState: RootState) => rootState.articleGroups.all
+    (rootState: RootState) => rootState.articleGroups.all,
   )
   const currentArticleGroup =
-    articleGroups.find(articleGroup => String(articleGroup.id) === params.id) ||
-    articleGroups[0]
+    articleGroups.find(
+      (articleGroup) => String(articleGroup.id) === params.id,
+    ) || articleGroups[0]
 
   return {
     currentArticleGroup,

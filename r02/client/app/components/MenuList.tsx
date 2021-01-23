@@ -20,7 +20,7 @@ const useStyles = makeStyles(
     root: {
       width: '100%',
     },
-  })
+  }),
 )
 
 export default ({ list }: Props) => {
@@ -32,7 +32,7 @@ export default ({ list }: Props) => {
       subheader={<ListSubheader component="h3">議事録一覧</ListSubheader>}
       className={classes.root}
     >
-      {list.map(item => (
+      {list.map((item) => (
         <ListItem key={item.id} component={Link} to={`/${item.id}`}>
           <ListItemText primary={`${formatDate(item.publishedAt)}マネミ`} />
         </ListItem>

@@ -10,7 +10,7 @@ const useStyles = makeStyles(
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-  })
+  }),
 )
 
 export default () => {

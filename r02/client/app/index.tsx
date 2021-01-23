@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <Router />
       </ThemeProvider>
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('root'),
   )
 })

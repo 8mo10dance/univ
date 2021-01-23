@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#878787',
     },
     toolbar: theme.mixins.toolbar,
-  })
+  }),
 )
 
 const Component: React.FC<{}> = () => {
@@ -49,7 +49,7 @@ const Component: React.FC<{}> = () => {
       </List>
       <Divider />
       <List component="nav" subheader={<ListSubheader>Links</ListSubheader>}>
-        {links.map(link => (
+        {links.map((link) => (
           <ListItem key={link.id} button dense component="a" href={link.url}>
             <ListItemText primary={link.name} />
           </ListItem>
