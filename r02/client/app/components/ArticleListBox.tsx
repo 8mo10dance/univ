@@ -7,7 +7,7 @@ import ArticleBox from '../components/ArticleBox'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     toolbar: theme.mixins.toolbar,
-  })
+  }),
 )
 
 interface Props {
@@ -20,7 +20,7 @@ export default ({ articles }: Props) => {
   return (
     <div>
       <div className={classes.toolbar}></div>
-      {articles.map(article => (
+      {articles.map((article) => (
         <Box key={article.id} m={3}>
           <ArticleBox {...article} />
         </Box>

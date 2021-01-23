@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#878787',
     },
     toolbar: theme.mixins.toolbar,
-  })
+  }),
 )
 
 export default ({ articleGroups }: Props) => {

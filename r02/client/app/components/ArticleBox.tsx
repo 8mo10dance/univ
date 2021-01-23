@@ -11,7 +11,7 @@ export default ({ title, articleItems }: Props) => {
         <Typography variant="h6">{title}</Typography>
         <Typography variant="body1" component="div">
           <ul style={{ margin: 0 }}>
-            {articleItems.map(item => (
+            {articleItems.map((item) => (
               <li key={item.id}>{item.text}</li>
             ))}
           </ul>
