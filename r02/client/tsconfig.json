@@ -11,6 +11,7 @@
     "jsx": "react",
     "noEmit": true /* Do not emit outputs. */,
     "strict": true /* Enable all strict type-checking options. */,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
       "import-svg": ["types/import-svg"],
