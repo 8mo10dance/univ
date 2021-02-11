@@ -1,0 +1,7 @@
+<div style="display: none;">
+  <% rendering_data.each do |k, v| %>
+    <%= content_tag(:div, v.to_json, id: "data-#{k}") %>
+  <% end %>
+</div>
+
+<%= content_tag(:div, nil, id: name) %>
