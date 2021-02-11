@@ -2,7 +2,8 @@
 
 class LinksController < ApplicationController
   def index
-    @links = Link.all
+    links = Link.order(id: :DESC)
+    @links = LinkBlueprint.render_as_json(links)
   end
 
   def new

@@ -2,11 +2,14 @@ import * as React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider, CssBaseline } from '@material-ui/core'
-import store from './store'
+import store from 'store'
 import theme from 'theme'
-import Router from './router'
+import Router from 'router'
 
-document.addEventListener('DOMContentLoaded', () => {
+const listener = () => {
+  const root = document.getElementById('root')
+  if (!root) return
+
   render(
     <Provider store={store}>
       <CssBaseline />
@@ -14,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <Router />
       </ThemeProvider>
     </Provider>,
-    document.getElementById('root'),
+    root,
   )
-})
+}
+
+export default listener
