@@ -3,6 +3,7 @@ import {
   Box,
   Typography,
   Paper,
+  Button,
   List,
   ListItem,
   ListItemText,
@@ -30,6 +31,16 @@ const LinkListPage: React.FC<Props> = ({ links }) => {
                 </ListItem>
               ))}
             </List>
+            <Box display="flex" justifyContent="flex-end" p={2}>
+              <Button
+                color="primary"
+                variant="contained"
+                component="a"
+                href="/links/new"
+              >
+                追加
+              </Button>
+            </Box>
           </Paper>
         </Box>
       </Container>

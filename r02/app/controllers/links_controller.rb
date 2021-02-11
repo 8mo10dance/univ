@@ -7,7 +7,8 @@ class LinksController < ApplicationController
   end
 
   def new
-    @link = Link.new
+    link = Link.new
+    @link = LinkBlueprint.render_as_json(link)
   end
 
   def create(link)
