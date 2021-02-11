@@ -24,12 +24,24 @@ RSpec.describe 'Links', type: :request do
   end
 
   describe 'POST /links' do
-    subject(:post_create) { post '/links' }
+    subject(:post_create) { post '/links', params: { link: link_params } }
 
-    it '一覧画面にリダイレクトすること' do
-      post_create
+    let(:link_params) { attributes_for(:link) }
 
-      expect(response).to redirect_to links_path
+    context '正常系' do
+      it '一覧画面にリダイレクトすること' do
+        post_create
+
+        expect(response).to redirect_to links_path
+      end
+
+      it { expect { post_create }.to change(Link, :count).by(1) }
+    end
+
+    context 'name が空の場合' do
+      let(:link_params) { attributes_for(:link, name: '') }
+
+      it { expect { post_create }.not_to change(Link, :count) }
     end
   end
 
@@ -37,6 +49,8 @@ RSpec.describe 'Links', type: :request do
     subject(:get_show) { get "/links/#{link.id}" }
 
     let(:link) { create(:link) }
+
+    before { link }
 
     it '200が返ること' do
       get_show
@@ -50,6 +64,8 @@ RSpec.describe 'Links', type: :request do
 
     let(:link) { create(:link) }
 
+    before { link }
+
     it '200が返ること' do
       get_edit
 
@@ -58,14 +74,33 @@ RSpec.describe 'Links', type: :request do
   end
 
   describe 'PATCH /links/:id' do
-    subject(:patch_update) { patch "/links/#{link.id}" }
+    subject(:patch_update) { patch "/links/#{link.id}", params: { link: link_params } }
 
     let(:link) { create(:link) }
+    let(:link_params) { attributes_for(:link, name: 'new name') }
 
-    it '詳細画面にリダイレクトすること' do
-      patch_update
+    before { link }
 
-      expect(response).to redirect_to link_path(link)
+    context '正常系' do
+      it '詳細画面にリダイレクトすること' do
+        patch_update
+
+        expect(response).to redirect_to link_path(link)
+      end
+
+      it 'link の情報が更新される' do
+        patch_update
+
+        expect(link.reload.name).to eq 'new name'
+      end
+    end
+
+    context 'name が空の場合' do
+      let(:link_params) { attributes_for(:link, name: '') }
+
+      it 'link の情報は更新されない' do
+        expect { patch_update }.not_to change(link.reload, :name)
+      end
     end
   end
 
@@ -74,10 +109,14 @@ RSpec.describe 'Links', type: :request do
 
     let(:link) { create(:link) }
 
+    before { link }
+
     it '一覧画面にリダイレクトすること' do
       delete_destroy
 
       expect(response).to redirect_to links_path
     end
+
+    it { expect { delete_destroy }.to change(Link, :count).by(-1) }
   end
 end
