@@ -68,7 +68,8 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails', '~> 4.8.0'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
