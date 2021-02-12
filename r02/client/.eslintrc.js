@@ -38,12 +38,7 @@ module.exports = {
   ],
   root: true,
   settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', 'jsx', '.ts', '.tsx'],
-      },
-    },
+    'import/resolver': 'webpack',
     react: {
       version: 'detect',
     },
