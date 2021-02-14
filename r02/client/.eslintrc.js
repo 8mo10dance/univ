@@ -38,12 +38,7 @@ module.exports = {
   ],
   root: true,
   settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', 'jsx', '.ts', '.tsx'],
-      },
-    },
+    'import/resolver': 'webpack',
     react: {
       version: 'detect',
     },
@@ -99,7 +94,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-
+    'react/jsx-props-no-spreading': 'off',
     // prettier
     'prettier/prettier': [
       'error',
