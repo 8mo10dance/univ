@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './app/index.tsx',
+  entry: './app/index.ts',
   output: {
     path: `${__dirname}/../app/assets/javascripts/webpack/`,
     filename: 'bundle.js',
