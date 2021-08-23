@@ -168,7 +168,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
     ridgepole (0.7.6)
       activerecord (>= 5.0.1, < 6)
       diffy
