@@ -4,14 +4,15 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: r02
   username: root
-  password: <%= ENV.fetch("RAILS_DATABASE_PASSWORD") { '' } %>
-  host: <%= ENV.fetch("RAILS_DATABASE_HOST") { '0.0.0.0' } %>
+  password: <%= ENV.fetch("RAILS_DATABASE_PASSWORD") { 'password' } %>
 
 development:
   <<: *default
+  host: <%= ENV.fetch("RAILS_DATABASE_HOST") { '0.0.0.0' } %>
 
 test:
   <<: *default
+  host: <%= ENV.fetch("RAILS_TEST_DATABASE_HOST") { '0.0.0.0' } %>
   port: <%= ENV.fetch("RAILS_TEST_DATABASE_PORT") { '13306' } %>
 
 production:
