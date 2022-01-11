@@ -21,7 +21,4 @@ RUN if [ "${RAILS_ENV:-development}" = development ]; then \
     fi
 RUN mkdir -p tmp/pids
 
-COPY . .
-RUN bundle exec rake assets:precompile
-
 VOLUME ["/gaco/r02"]
