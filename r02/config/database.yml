@@ -3,7 +3,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: r02
-  username: root
+  username: rails_app
   password: <%= ENV.fetch("RAILS_DATABASE_PASSWORD") { 'password' } %>
 
 development:
