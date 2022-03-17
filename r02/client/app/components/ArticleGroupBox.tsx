@@ -1,10 +1,13 @@
 import * as React from 'react'
-import { useCurrentArticleGroup } from 'hooks/articleGroups'
+
+import { ArticleGroup } from 'types/models'
+
 import ArticleListBox from '../components/ArticleListBox'
 
-export default () => {
-  const { currentArticleGroup } = useCurrentArticleGroup()
-  const articles = currentArticleGroup ? currentArticleGroup.articles : []
+export type Props = {
+  articleGroup?: ArticleGroup
+}
 
-  return <ArticleListBox articles={articles} />
+export default ({ articleGroup }: Props) => {
+  return <ArticleListBox articles={articleGroup ? articleGroup.articles : []} />
 }

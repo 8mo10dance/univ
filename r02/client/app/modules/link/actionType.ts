@@ -1,5 +1,0 @@
-export const GET_ALL_START = 'LINK/GET_ALL_START'
-
-export const GET_ALL_SUCCEED = 'LINK/GET_ALL_SUCCEED'
-
-export const GET_ALL_FAIL = 'LINK/GET_ALL_FAIL'

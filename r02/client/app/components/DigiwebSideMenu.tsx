@@ -7,7 +7,9 @@ import {
   ListSubheader,
 } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import { useLinks } from 'hooks/links'
+
+import { Link } from 'types/models'
+import { getLinks } from 'services/links'
 
 const drawerWidth = 230
 
@@ -22,8 +24,22 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const Component: React.FC<{}> = () => {
+  const [links, setLinks] = React.useState<Link[]>([])
   const classes = useStyles()
-  const { links } = useLinks()
+
+  const fetchLinks = async () => {
+    try {
+      const { data } = await getLinks()
+      if (data.links === undefined) throw new Error()
+      setLinks(data.links)
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
+  React.useEffect(() => {
+    fetchLinks()
+  }, [])
 
   return (
     <div className={classes.drawer}>
