@@ -1,5 +1,4 @@
 import { takeLatest, put, call } from 'redux-saga/effects'
-import camelcaseKeys from 'camelcase-keys'
 
 import * as ActionType from 'modules/articleGroups/actionType'
 import * as actions from 'modules/articleGroups/actions'
@@ -8,11 +7,7 @@ import { getArticleGroups } from 'services/articleGroups'
 function* getArticleGroupsTask() {
   try {
     const { data } = yield call(getArticleGroups)
-    yield put(
-      actions.getArticleGroups.succeed(
-        camelcaseKeys(data.article_groups, { deep: true }),
-      ),
-    )
+    yield put(actions.getArticleGroups.succeed(data.articleGroups))
   } catch (e) {
     yield put(actions.getArticleGroups.fail())
   }
