@@ -1,22 +1,15 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
+  adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: r02
-  username: rails_app
-  password: <%= ENV.fetch("RAILS_DATABASE_PASSWORD") { 'password' } %>
+  timeout: 5000
 
 development:
   <<: *default
-  host: <%= ENV.fetch("RAILS_DATABASE_HOST") { '0.0.0.0' } %>
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  host: <%= ENV.fetch("RAILS_TEST_DATABASE_HOST") { '0.0.0.0' } %>
-  port: <%= ENV.fetch("RAILS_TEST_DATABASE_PORT") { '13306' } %>
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: r02_production
-  username: r02
-  password: <%= ENV['R02_DATABASE_PASSWORD'] %>
