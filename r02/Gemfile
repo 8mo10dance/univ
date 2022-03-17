@@ -34,7 +34,7 @@ gem 'action_args'
 gem 'blueprinter'
 gem 'enumerize'
 gem 'mini_racer' # これがないと bin/rails できない
-gem 'mysql2'
+gem 'sqlite3', '~> 1.3.0'
 gem 'ridgepole'
 gem 'rswag'
 gem 'seed-fu'
