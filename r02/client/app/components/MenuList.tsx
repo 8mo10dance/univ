@@ -32,8 +32,12 @@ export default ({ list }: Props) => {
       subheader={<ListSubheader component="h3">議事録一覧</ListSubheader>}
       className={classes.root}
     >
-      {list.map((item) => (
-        <ListItem key={item.id} component={Link} to={`/${item.id}`}>
+      {list.map(item => (
+        <ListItem
+          key={item.id}
+          component={Link}
+          to={`/glee_manages/${item.id}`}
+        >
           <ListItemText primary={`${formatDate(item.publishedAt)}マネミ`} />
         </ListItem>
       ))}
