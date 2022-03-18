@@ -33,7 +33,11 @@ export default ({ list }: Props) => {
       className={classes.root}
     >
       {list.map((item) => (
-        <ListItem key={item.id} component={Link} to={`/${item.id}`}>
+        <ListItem
+          key={item.id}
+          component={Link}
+          to={`/glee_manages/${item.id}`}
+        >
           <ListItemText primary={`${formatDate(item.publishedAt)}マネミ`} />
         </ListItem>
       ))}
