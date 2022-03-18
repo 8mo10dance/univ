@@ -1,4 +1,12 @@
-import axios from 'axios'
+import { AxiosPromise } from 'axios'
 
-export const getArticleGroups = () =>
-  axios.get('https://glee.onrender.com/api/v1/article_groups')
+import { ArticleGroup } from 'types/models'
+
+import { apiRequest } from './base'
+
+export type GetArticleGroupsResponse = {
+  articleGroups: ArticleGroup[]
+}
+
+export const getArticleGroups = (): AxiosPromise<GetArticleGroupsResponse> =>
+  apiRequest.get('https://glee.onrender.com/api/v1/article_groups')
