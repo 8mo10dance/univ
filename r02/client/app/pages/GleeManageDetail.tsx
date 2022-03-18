@@ -26,7 +26,7 @@ const GleeManageDetail = () => {
     fetchArticleGroups()
   }, [])
 
-  const articleGroup = articleGroups.find((g) => g.id === Number(params.id))
+  const articleGroup = articleGroups.find(g => g.id === Number(params.id))
   if (articleGroup === undefined) return null
 
   return (
