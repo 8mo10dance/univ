@@ -18,7 +18,7 @@ export default () => {
 
       setArticleGroups(data.articleGroups)
     } catch (e) {
-      console.error(e)
+      // TODO
     }
   }
 

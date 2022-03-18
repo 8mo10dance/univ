@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { ArticleGroup } from 'types/models'
 
-import ArticleListBox from '../components/ArticleListBox'
+import ArticleListBox from './ArticleListBox'
 
 export type Props = {
   articleGroup?: ArticleGroup
