@@ -7,8 +7,9 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ${PWD}:/app
+      - ${PWD}/r02:/app
       - bundle:/usr/local/bundle
+    command: bundle exec rails s -b 0.0.0.0
 
 volumes:
   bundle:
