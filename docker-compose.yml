@@ -9,6 +9,7 @@ services:
     volumes:
       - ${PWD}/r02:/app
       - bundle:/usr/local/bundle
+    command: bundle exec rails s -b 0.0.0.0
 
 volumes:
   bundle:
