@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    image: ruby:2.7.4
+    working_dir: /app
+    ports:
+      - '3000:3000'
+    volumes:
+      - ${PWD}:/app
+      - bundle:/usr/local/bundle
+
+volumes:
+  bundle:
