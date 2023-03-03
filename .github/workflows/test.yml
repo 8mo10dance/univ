@@ -1,0 +1,25 @@
+name: test
+
+on: [push]
+
+jobs:
+  r02-rspec:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: r02
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.4
+      - name: Install required gems
+        run: |
+          gem install bundler:2.0.1
+          bundle install --jobs 4 --retry 3
+      - name: Migrate DB
+        run: RAILS_ENV=test bundle exec rake db:migrate
+      - name: Run RSpec
+        run: bundle exec rspec
