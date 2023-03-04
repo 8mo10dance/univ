@@ -14,7 +14,8 @@ services:
     image: node:14.16.0
     working_dir: /app
     volumes:
-      - ${PWD}/r02/client:/app
+      - ${PWD}/client:/app
+      - ${PWD}/r02/app/assets/javascripts/webpack/:/app/dist
       - node_modules:/app/node_modules
     command: npm run build
 
