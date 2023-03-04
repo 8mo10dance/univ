@@ -17,6 +17,11 @@ interaction:
         command: bundle exec rails s -b 0.0.0.0
         compose:
           run_options: [service-ports]
+  npm:
+    service: client
+    command: npm
 
 provision:
   - dip bundle install
+  - dip npm install
+  - dip npm run build
