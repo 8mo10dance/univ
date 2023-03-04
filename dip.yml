@@ -8,7 +8,7 @@ interaction:
     command: bash
   bundle:
     service: app
-    command: bundle 
+    command: bundle
   rails:
     service: app
     command: bundle exec rails
