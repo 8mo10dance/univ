@@ -20,8 +20,13 @@ interaction:
   npm:
     service: client
     command: npm
+  npm-digiweb:
+    service: digiweb
+    command: npm
 
 provision:
   - dip bundle install
   - dip npm install
   - dip npm run build
+  - dip npm-digiweb install
+  - dip npm-digiweb run build

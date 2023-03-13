@@ -1,0 +1,11 @@
+<% provide :title, 'デジウェブ(仮) トップ' %>
+<% provide :stylesheets do %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+<% end %>
+<% provide :javascripts do %>
+  <%= javascript_include_tag 'digiweb/application' %>
+<% end %>
+
+<div id="root"></div>

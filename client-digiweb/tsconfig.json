@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom", "es2018"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "noEmit": true /* Do not emit outputs. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "import-svg": ["types/import-svg"],
+      "*": ["app/*"]
+    },
+    "typeRoots": ["types", "node_modules/@types"]
+  },
+  "include": ["app", "types"],
+  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "compileOnSave": false
+}
