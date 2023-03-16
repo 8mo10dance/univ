@@ -6,6 +6,7 @@
     "build": "webpack --colors --config ./webpack.config.js",
     "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier",
     "eslint": "eslint"
   },
   "dependencies": {
@@ -31,8 +32,6 @@
     "yup": "^0.32.8"
   },
   "devDependencies": {
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2",
     "@babel/core": "^7.12.13",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
@@ -54,8 +53,10 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "prettier-stylelint": "^0.4.2",
-    "react-svg-loader": "^3.0.3"
+    "react-svg-loader": "^3.0.3",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   }
 }
