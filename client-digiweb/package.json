@@ -1,0 +1,51 @@
+{
+  "name": "r02",
+  "private": true,
+  "scripts": {
+    "check": "tsc",
+    "build": "webpack --colors --config ./webpack.config.js",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier",
+    "eslint": "eslint"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.1",
+    "@material-ui/icons": "^4.9.1",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "axios": "^0.21.2",
+    "camelcase-keys": "^6.1.2",
+    "react": "^16.9.13",
+    "react-dom": "^16.9.4",
+    "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.3.6",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prefer-arrow": "^1.1.6",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1",
+    "prettier-stylelint": "^0.4.2",
+    "react-svg-loader": "^3.0.3",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}

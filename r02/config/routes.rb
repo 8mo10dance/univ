@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resource :home, only: :show, controller: 'home'
   root to: 'home#show'
 
+  resource :digiweb, only: :show, controller: 'digiweb'
+
   namespace :api do
     namespace :v1 do
       resources :article_groups, only: %i[index]
