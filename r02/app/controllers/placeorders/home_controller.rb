@@ -1,5 +1,5 @@
 module Placeorders
-  class HomeController < ::ApplicationController
+  class HomeController < Placeorders::ApplicationController
     def show; end
   end
 end

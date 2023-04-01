@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title><%= yield :title %> | PlaceOrders 飲食店ドットコム</title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag 'placeorders/application' %>
+    <%= yield :stylesheets %>
+    <%= yield :javascripts %>
+  </head>
+
+  <body>
+    <header></header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer></footer>
+  </body>
+</html>
