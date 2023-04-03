@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   resource :digiweb, only: :show, controller: 'digiweb'
 
+  namespace :placeorders do
+    get '/', to: 'home#show'
+  end
+
   namespace :api do
     namespace :v1 do
       resources :article_groups, only: %i[index]

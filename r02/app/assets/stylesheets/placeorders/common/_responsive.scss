@@ -1,0 +1,5 @@
+@mixin l-sp {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
