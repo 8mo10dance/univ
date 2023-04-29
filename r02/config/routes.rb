@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :links
   resource :home, only: :show, controller: 'home'
   root to: 'home#show'
-
-  resource :digiweb, only: :show, controller: 'digiweb'
+  resource :swiper, only: :show
+  resource :digiweb, only: :show, controller: 'digiweb'    
 
   namespace :api do
     namespace :v1 do
