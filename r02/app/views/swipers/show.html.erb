@@ -1,1 +1,65 @@
-hoge
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>myapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper-slide {
+        width: 200px;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .swiper-slide img {
+        width: 80%;
+      }
+      .swiper-slide-active img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sliderを包むコンテナ要素 -->
+    <div class="swiper">
+      <!-- スライド要素を包む要素 -->
+      <div class="swiper-wrapper">
+        <!-- 各スライド -->
+        <div class="swiper-slide">
+          <img src="https://www.toei-anim.co.jp/tv/digimon/images/character/c1.webp" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.toei-anim.co.jp/tv/digimon/images/character/c2.webp" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.toei-anim.co.jp/tv/digimon/images/character/c3.webp" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.toei-anim.co.jp/tv/digimon/images/character/c4.webp" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.toei-anim.co.jp/tv/digimon/images/character/c5.webp" alt />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        breakpoints: {
+          600: {
+            centeredSlides: false,
+            slidesPerView: 5,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
