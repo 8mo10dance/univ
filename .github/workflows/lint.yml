@@ -39,5 +39,8 @@ jobs:
         run: |
           gem install bundler
           bundle install
-      - name: Run Rubocop
-        run: bundle exec rubocop
+      - name: Run Rubocop and comment on PR
+        uses: reviewdog/action-rubocop@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: 'github-pr-review'
