@@ -1,7 +1,3 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
 AllCops:
   Exclude:
     - 'Gemfile'
@@ -111,16 +107,3 @@ AllCops:
     - 'r02/spec/rails_helper.rb'
     - 'r02/spec/spec_helper.rb'
     - 'r02/spec/swagger_helper.rb'
-
-RSpec/ContextWording:
-  Enabled: false
-
-Rails/HelperInstanceVariable:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Metrics/BlockLength:
-  Exclude:
-    - '**/spec/**/*'
