@@ -4,7 +4,6 @@ require:
 
 AllCops:
   Exclude:
-    - 'Gemfile'
     - 'r01/Gemfile'
     - 'r01/Rakefile'
     - 'r01/app/channels/application_cable/channel.rb'
